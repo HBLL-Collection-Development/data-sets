@@ -1,0 +1,184 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 3 using expression grel:chomp(cell.value, '.')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 3",
+    "expression": "grel:chomp(cell.value, '.')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 3 using expression grel:replace(cell.value, '  ', ' ')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 3",
+    "expression": "grel:replace(cell.value, '  ', ' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 5 using expression grel:if(startsWith(cell.value, '-'), '', cell.value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 5",
+    "expression": "grel:if(startsWith(cell.value, '-'), '', cell.value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 5 using expression grel:if(cell.value == '$0.00', '', cell.value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 5",
+    "expression": "grel:if(cell.value == '$0.00', '', cell.value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 10 using expression grel:if(cell.value == 'see URL', '', cell.value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 10",
+    "expression": "grel:if(cell.value == 'see URL', '', cell.value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Column 8",
+    "columnName": "Column 8"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 10 using expression grel:if(cell.value.contains('XX('), '', cell.value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 10",
+    "expression": "grel:if(cell.value.contains('XX('), '', cell.value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 1 to account",
+    "oldColumnName": "Column 1",
+    "newColumnName": "account"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 2 to subaccount",
+    "oldColumnName": "Column 2",
+    "newColumnName": "subaccount"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 3 to title",
+    "oldColumnName": "Column 3",
+    "newColumnName": "title"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 4 to year",
+    "oldColumnName": "Column 4",
+    "newColumnName": "year"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 5 to price",
+    "oldColumnName": "Column 5",
+    "newColumnName": "price"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 6 to orderNumber",
+    "oldColumnName": "Column 6",
+    "newColumnName": "orderNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 7 to titleControl",
+    "oldColumnName": "Column 7",
+    "newColumnName": "titleControl"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 9 to issn",
+    "oldColumnName": "Column 9",
+    "newColumnName": "issn"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 10 to callNumber",
+    "oldColumnName": "Column 10",
+    "newColumnName": "callNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 11 to notes",
+    "oldColumnName": "Column 11",
+    "newColumnName": "notes"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column title using expression grel:replace(cell.value, /\\(.*?\\)/, '')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "title",
+    "expression": "grel:replace(cell.value, /\\(.*?\\)/, '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column issn using expression grel:toUppercase(cell.value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "issn",
+    "expression": "grel:toUppercase(cell.value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column callNumber using expression grel:if(cell.value == 'URL', '', cell.value)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "callNumber",
+    "expression": "grel:if(cell.value == 'URL', '', cell.value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
